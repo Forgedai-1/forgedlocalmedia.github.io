@@ -633,7 +633,7 @@
         <div class="container">
             <h2>Ready to Get Forged?</h2>
             <p>Local businesses that stay visible win. The ones that don't get forgotten. Let's make sure you're the former.</p>
-            <a href="mailto:basstransformer@gmail.com" class="btn-primary">Book Your Free 20-Minute Call</a>
+            <a href="#" id="cta-contact-btn" class="btn-primary">Book Your Free 20-Minute Call</a>
             <p style="margin-top: 1.5rem; font-size: 0.9rem; opacity: 0.8;">No contracts. No pressure. Just a real conversation about your business.</p>
         </div>
     </section>
@@ -642,8 +642,27 @@
     <footer>
         <div class="logo">Forged <span>Local</span> Media</div>
         <div class="tagline">Built for Local Business Growth</div>
-        <p>basstransformer@gmail.com</p>
+        <p id="footer-contact-email"></p>
         <p style="margin-top: 2rem; font-size: 0.8rem; opacity: 0.6;">© 2026 Forged Local Media. All rights reserved. | Powered by Forged AI</p>
     </footer>
+
+    <script>
+        // Simple obfuscation to prevent basic email harvesting bots
+        document.addEventListener('DOMContentLoaded', function() {
+            var user = 'basstransformer';
+            var domain = 'gmail.com';
+            var email = user + '@' + domain;
+
+            var ctaBtn = document.getElementById('cta-contact-btn');
+            if (ctaBtn) {
+                ctaBtn.href = 'mailto:' + email;
+            }
+
+            var footerEmail = document.getElementById('footer-contact-email');
+            if (footerEmail) {
+                footerEmail.textContent = email;
+            }
+        });
+    </script>
 </body>
 </html>
