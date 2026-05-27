@@ -1,0 +1,3 @@
+## 2024-05-24 - Added aria-label to mobile menu toggle and global focus-visible styles
+**Learning:** Icon-only buttons (like the mobile hamburger menu toggle) often lack accessible names for screen readers, meaning users who rely on screen readers won't know what the button does. Additionally, removing or failing to define `:focus-visible` styles makes keyboard navigation difficult or impossible.
+**Action:** Always verify icon-only buttons have an appropriate `aria-label` attribute. Also, implement a consistent global `:focus-visible` style rule or check that one exists and provides adequate contrast.
