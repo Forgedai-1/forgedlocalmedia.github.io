@@ -24,6 +24,13 @@
             box-sizing: border-box;
         }
 
+        /* Keyboard Accessibility Focus State */
+        *:focus-visible {
+            outline: 2px solid var(--burnt-orange);
+            outline-offset: 2px;
+            box-shadow: 0 0 0 4px rgba(196, 92, 38, 0.2);
+        }
+
         body {
             font-family: 'Inter', sans-serif;
             color: var(--charcoal);
@@ -501,7 +508,7 @@
                 <li><a href="#proof">Results</a></li>
                 <li><a href="#contact" class="nav-cta">Get Started</a></li>
             </ul>
-            <button class="menu-toggle">☰</button>
+            <button class="menu-toggle" aria-label="Toggle mobile menu">☰</button>
         </div>
     </nav>
 
